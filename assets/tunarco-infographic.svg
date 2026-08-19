@@ -1,0 +1,126 @@
+<svg viewBox="0 0 760 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="tGradHub" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0092b8"/>
+      <stop offset="100%" stop-color="#005f8a"/>
+    </linearGradient>
+    <linearGradient id="tGradBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0092b8"/>
+      <stop offset="100%" stop-color="#3fd1cf"/>
+    </linearGradient>
+    <linearGradient id="tGradOrange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff6b35"/>
+      <stop offset="100%" stop-color="#ffb700"/>
+    </linearGradient>
+    <linearGradient id="tGradGreen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#12a454"/>
+      <stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+    <linearGradient id="tGradGrey" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#475569"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+    <radialGradient id="bgDots" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#94a3b8" stop-opacity=".35"/>
+      <stop offset="100%" stop-color="#94a3b8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="600" fill="#f8fafc" rx="24"/>
+  <g opacity="0.5">
+    <circle cx="0" cy="0" r="0" fill="none"/>
+  </g>
+  <!-- subtle dotted network backdrop -->
+  <g fill="#cbd5e1">
+    <circle cx="40" cy="40" r="1.6"/><circle cx="90" cy="60" r="1.6"/><circle cx="140" cy="35" r="1.6"/>
+    <circle cx="700" cy="50" r="1.6"/><circle cx="650" cy="80" r="1.6"/><circle cx="720" cy="110" r="1.6"/>
+    <circle cx="30" cy="520" r="1.6"/><circle cx="70" cy="560" r="1.6"/><circle cx="120" cy="540" r="1.6"/>
+    <circle cx="700" cy="540" r="1.6"/><circle cx="660" cy="570" r="1.6"/><circle cx="730" cy="510" r="1.6"/>
+  </g>
+
+  <!-- connector lines: hub -> main nodes -->
+  <g fill="none" stroke="#cbd5e1" stroke-width="2">
+    <path d="M 460,300 Q 460,190 460,90"/>
+    <path d="M 460,300 Q 570,250 660,190"/>
+    <path d="M 460,300 Q 545,370 615,430"/>
+    <path d="M 460,300 Q 385,370 300,430"/>
+    <path d="M 460,300 Q 360,250 255,190"/>
+  </g>
+  <!-- connector lines: International -> city nodes -->
+  <g fill="none" stroke="#cbd5e1" stroke-width="1.6" stroke-dasharray="3 4">
+    <path d="M 255,190 Q 165,150 80,110"/>
+    <path d="M 255,190 Q 150,205 45,225"/>
+    <path d="M 255,190 Q 175,265 95,340"/>
+  </g>
+
+  <!-- city sub-nodes -->
+  <g font-size="13" font-weight="700" fill="#1e293b" text-anchor="middle">
+    <g>
+      <circle cx="80" cy="110" r="26" fill="#ffffff" stroke="#0092b8" stroke-width="2.5"/>
+      <text x="80" y="116" font-size="18">🇹🇳</text>
+      <text x="80" y="146" font-size="11">Tunis (siège)</text>
+    </g>
+    <g>
+      <circle cx="45" cy="225" r="26" fill="#ffffff" stroke="#0092b8" stroke-width="2.5"/>
+      <text x="45" y="231" font-size="18">🇫🇷</text>
+      <text x="45" y="261" font-size="10.5">Metz &amp; Thionville</text>
+    </g>
+    <g>
+      <circle cx="95" cy="340" r="26" fill="#ffffff" stroke="#0092b8" stroke-width="2.5"/>
+      <text x="95" y="346" font-size="18">🇱🇺</text>
+      <text x="95" y="376" font-size="11">Luxembourg</text>
+    </g>
+  </g>
+
+  <!-- main satellite nodes -->
+  <!-- History -->
+  <g text-anchor="middle">
+    <circle cx="460" cy="90" r="50" fill="url(#tGradOrange)"/>
+    <text x="460" y="82" font-size="24" text-anchor="middle">🚀</text>
+    <text x="460" y="106" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">Depuis 2015</text>
+    <text x="460" y="150" font-size="12" font-weight="700" fill="#1e293b" text-anchor="middle">Histoire</text>
+    <text x="460" y="166" font-size="10.5" fill="#64748b" text-anchor="middle">Fondée à Tunis</text>
+  </g>
+
+  <!-- Formation Continue -->
+  <g text-anchor="middle">
+    <circle cx="660" cy="190" r="50" fill="url(#tGradGreen)"/>
+    <text x="660" y="182" font-size="24" text-anchor="middle">🎓</text>
+    <text x="660" y="206" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">Formation</text>
+    <text x="660" y="252" font-size="12" font-weight="700" fill="#1e293b" text-anchor="middle">Formation Continue</text>
+    <text x="660" y="268" font-size="10.5" fill="#64748b" text-anchor="middle">Notre 1er métier</text>
+  </g>
+
+  <!-- Fabrication électronique -->
+  <g text-anchor="middle">
+    <circle cx="615" cy="430" r="50" fill="url(#tGradBlue)"/>
+    <text x="615" y="422" font-size="24" text-anchor="middle">🔌</text>
+    <text x="615" y="446" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">Électronique</text>
+    <text x="615" y="497" font-size="12" font-weight="700" fill="#1e293b" text-anchor="middle">Composants</text>
+    <text x="615" y="513" font-size="10.5" fill="#64748b" text-anchor="middle">Fabrication électronique</text>
+  </g>
+
+  <!-- Produit phare -->
+  <g text-anchor="middle">
+    <circle cx="300" cy="430" r="50" fill="url(#tGradOrange)"/>
+    <text x="300" y="422" font-size="24" text-anchor="middle">🤖</text>
+    <text x="300" y="446" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">Produit phare</text>
+    <text x="300" y="497" font-size="12" font-weight="700" fill="#1e293b" text-anchor="middle">Les Petits Génies</text>
+    <text x="300" y="513" font-size="10.5" fill="#64748b" text-anchor="middle">Robotique pour enfants</text>
+  </g>
+
+  <!-- International -->
+  <g text-anchor="middle">
+    <circle cx="255" cy="190" r="50" fill="url(#tGradGrey)"/>
+    <text x="255" y="182" font-size="24" text-anchor="middle">🌍</text>
+    <text x="255" y="206" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">International</text>
+    <text x="255" y="252" font-size="12" font-weight="700" fill="#1e293b" text-anchor="middle">Présence</text>
+    <text x="255" y="268" font-size="10.5" fill="#64748b" text-anchor="middle">3 pays</text>
+  </g>
+
+  <!-- central hub -->
+  <circle cx="460" cy="300" r="82" fill="url(#tGradHub)"/>
+  <circle cx="460" cy="300" r="82" fill="none" stroke="#ffffff" stroke-width="3"/>
+  <text x="460" y="296" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="1">TUNARCO</text>
+  <text x="460" y="318" font-size="10.5" fill="#d9f4ff" text-anchor="middle">Robotique &amp; Innovation</text>
+</svg>

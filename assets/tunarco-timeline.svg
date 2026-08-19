@@ -1,0 +1,113 @@
+<svg viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="arcGrad" x1="100" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"  stop-color="#ffc107"/>
+      <stop offset="25%" stop-color="#12a454"/>
+      <stop offset="50%" stop-color="#0092b8"/>
+      <stop offset="75%" stop-color="#4f7fd6"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="620" fill="#ffffff" rx="24"/>
+
+  <!-- subtle globe background, Mediterranean / Europe focus -->
+  <g opacity="0.55">
+    <circle cx="450" cy="430" r="235" fill="#f1f4f8"/>
+    <circle cx="450" cy="430" r="235" fill="none" stroke="#e2e8f0" stroke-width="2"/>
+    <!-- latitude arcs -->
+    <ellipse cx="450" cy="430" rx="235" ry="70" fill="none" stroke="#e2e8f0" stroke-width="1.4"/>
+    <ellipse cx="450" cy="430" rx="235" ry="150" fill="none" stroke="#e2e8f0" stroke-width="1.4"/>
+    <!-- longitude arcs -->
+    <ellipse cx="450" cy="430" rx="70" ry="235" fill="none" stroke="#e2e8f0" stroke-width="1.4"/>
+    <ellipse cx="450" cy="430" rx="150" ry="235" fill="none" stroke="#e2e8f0" stroke-width="1.4"/>
+    <!-- soft "Europe" blob (upper) -->
+    <path d="M 380,300 Q 400,270 440,275 Q 480,265 510,290 Q 530,310 505,330 Q 470,345 430,335 Q 390,330 380,300 Z" fill="#dbe3ec"/>
+    <!-- soft "Africa/Tunisia" blob (lower-center) -->
+    <path d="M 400,370 Q 440,355 480,370 Q 510,400 495,450 Q 480,500 445,510 Q 410,500 400,450 Q 390,405 400,370 Z" fill="#dbe3ec"/>
+    <!-- Tunisia marker -->
+    <circle cx="452" cy="378" r="5" fill="#0092b8"/>
+  </g>
+
+  <!-- arched connector path -->
+  <path d="M 100,480 C 220,120 680,120 800,480" fill="none" stroke="url(#arcGrad)" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- ===== Node 1 : Founding ===== -->
+  <g>
+    <line x1="100" y1="480" x2="100" y2="360" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3 4"/>
+    <circle cx="100" cy="480" r="12" fill="#ffc107" stroke="#ffffff" stroke-width="3"/>
+    <g transform="translate(30,220)">
+      <rect x="0" y="0" width="150" height="112" rx="16" fill="#ffffff" stroke="#eef1f5" stroke-width="1.5" filter="none" style="filter:drop-shadow(0 8px 18px rgba(0,0,0,.12))"/>
+      <path d="M 65,112 L 80,132 L 95,112 Z" fill="#ffffff"/>
+      <circle cx="28" cy="30" r="18" fill="#ffc107"/>
+      <text x="28" y="37" font-size="17" text-anchor="middle">📅</text>
+      <text x="16" y="66" font-size="13" font-weight="700" fill="#1e293b">Tunis, 2015</text>
+      <text x="16" y="86" font-size="10.5" fill="#64748b">Les débuts</text>
+      <text x="16" y="100" font-size="10.5" fill="#64748b">de TUNARCO</text>
+    </g>
+  </g>
+
+  <!-- ===== Node 2 : Formation Continue ===== -->
+  <g>
+    <line x1="243" y1="278" x2="243" y2="175" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3 4"/>
+    <circle cx="243" cy="278" r="12" fill="#12a454" stroke="#ffffff" stroke-width="3"/>
+    <g transform="translate(168,45)">
+      <rect x="0" y="0" width="150" height="112" rx="16" fill="#ffffff" stroke="#eef1f5" stroke-width="1.5" style="filter:drop-shadow(0 8px 18px rgba(0,0,0,.12))"/>
+      <path d="M 65,112 L 80,132 L 95,112 Z" fill="#ffffff"/>
+      <circle cx="28" cy="30" r="18" fill="#12a454"/>
+      <text x="28" y="37" font-size="17" text-anchor="middle">🎓</text>
+      <text x="16" y="66" font-size="13" font-weight="700" fill="#1e293b">Formation</text>
+      <text x="16" y="82" font-size="13" font-weight="700" fill="#1e293b">Continue</text>
+      <text x="16" y="100" font-size="10.5" fill="#64748b">Notre 1er métier</text>
+    </g>
+  </g>
+
+  <!-- ===== Node 3 : Electronic Components ===== -->
+  <g>
+    <line x1="450" y1="210" x2="450" y2="150" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3 4"/>
+    <circle cx="450" cy="210" r="12" fill="#0092b8" stroke="#ffffff" stroke-width="3"/>
+    <g transform="translate(375,10)">
+      <rect x="0" y="0" width="150" height="112" rx="16" fill="#ffffff" stroke="#eef1f5" stroke-width="1.5" style="filter:drop-shadow(0 8px 18px rgba(0,0,0,.12))"/>
+      <path d="M 65,112 L 80,132 L 95,112 Z" fill="#ffffff"/>
+      <circle cx="28" cy="30" r="18" fill="#0092b8"/>
+      <text x="28" y="37" font-size="17" text-anchor="middle">🔌</text>
+      <text x="16" y="66" font-size="13" font-weight="700" fill="#1e293b">Composants</text>
+      <text x="16" y="82" font-size="13" font-weight="700" fill="#1e293b">Électroniques</text>
+      <text x="16" y="100" font-size="10.5" fill="#64748b">Fabrication</text>
+    </g>
+  </g>
+
+  <!-- ===== Node 4 : Les Petits Génies ===== -->
+  <g>
+    <line x1="657" y1="278" x2="657" y2="175" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3 4"/>
+    <circle cx="657" cy="278" r="12" fill="#4f7fd6" stroke="#ffffff" stroke-width="3"/>
+    <g transform="translate(582,45)">
+      <rect x="0" y="0" width="150" height="112" rx="16" fill="#ffffff" stroke="#eef1f5" stroke-width="1.5" style="filter:drop-shadow(0 8px 18px rgba(0,0,0,.12))"/>
+      <path d="M 65,112 L 80,132 L 95,112 Z" fill="#ffffff"/>
+      <circle cx="28" cy="30" r="18" fill="#4f7fd6"/>
+      <text x="28" y="37" font-size="17" text-anchor="middle">🤖</text>
+      <text x="16" y="66" font-size="13" font-weight="700" fill="#1e293b">Les Petits</text>
+      <text x="16" y="82" font-size="13" font-weight="700" fill="#1e293b">Génies</text>
+      <text x="16" y="100" font-size="10.5" fill="#64748b">Robotique enfants</text>
+    </g>
+  </g>
+
+  <!-- ===== Node 5 : International ===== -->
+  <g>
+    <line x1="800" y1="480" x2="800" y2="360" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="3 4"/>
+    <circle cx="800" cy="480" r="12" fill="#7c3aed" stroke="#ffffff" stroke-width="3"/>
+    <g transform="translate(720,220)">
+      <rect x="0" y="0" width="160" height="112" rx="16" fill="#ffffff" stroke="#eef1f5" stroke-width="1.5" style="filter:drop-shadow(0 8px 18px rgba(0,0,0,.12))"/>
+      <path d="M 65,112 L 80,132 L 95,112 Z" fill="#ffffff"/>
+      <circle cx="28" cy="30" r="18" fill="#7c3aed"/>
+      <text x="28" y="37" font-size="17" text-anchor="middle">🌍</text>
+      <text x="16" y="66" font-size="13" font-weight="700" fill="#1e293b">France</text>
+      <text x="16" y="82" font-size="11.5" fill="#64748b">Metz &amp; Thionville</text>
+      <text x="16" y="100" font-size="11.5" fill="#64748b">+ Luxembourg</text>
+    </g>
+  </g>
+
+  <!-- footer wordmark -->
+  <text x="450" y="590" font-size="20" font-weight="800" fill="#1e293b" text-anchor="middle" letter-spacing="1.5">TUNARCO</text>
+  <text x="450" y="608" font-size="11" fill="#94a3b8" text-anchor="middle">Depuis 2015 · Tunisie · France · Luxembourg</text>
+</svg>
