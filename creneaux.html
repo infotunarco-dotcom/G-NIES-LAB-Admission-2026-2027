@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Créneaux — Les Petits Génies de la Tunisie</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Exo+2:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="pageTransition"></div>
+<header class="site-header">
+  <div class="brand">
+    <img class="logo-img" src="assets/logo.png" alt="Logo Les Petits Génies">
+    <div class="brand-text">
+      <h1>Les Petits Génies de la Tunisie</h1>
+      <span>Robotique · Conception 3D · Programmation · Électronique</span>
+    </div>
+  </div>
+  <nav class="main-nav">
+    <a href="apropos.html">À propos</a>
+    <a href="index.html">Accueil</a>
+    <a href="formation.html">La formation</a>
+    <a href="creneaux.html" class="active">Créneaux</a>
+    <a href="planning-competitions.html">Compétitions</a>
+    <a href="inscription.html">Inscription</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-banner">
+    <h2 class="admission-title">GÉNIES LAB</h2>
+    <span class="year-badge">Admission 2026 – 2027</span>
+  </section>
+
+  <div class="card">
+    <h3>Créneaux disponibles</h3>
+    <p>Chaque séance dure <strong>1h30 par semaine</strong>. Choisissez le jour et l'horaire qui vous conviennent le mieux.</p>
+    <table class="schedule">
+      <tr><th>Jour</th><th>Horaires proposés</th></tr>
+      <tr>
+        <td>Mardi → Vendredi</td>
+        <td>
+          <span class="slot-tag">14h00 – 15h30</span>
+          <span class="slot-tag">15h30 – 17h00</span>
+          <span class="slot-tag">17h00 – 18h30</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Samedi</td>
+        <td>
+          <span class="slot-tag">9h00 – 10h30</span>
+          <span class="slot-tag">10h30 – 12h00</span>
+          <span class="slot-tag">14h00 – 15h30</span>
+          <span class="slot-tag">15h30 – 17h00</span>
+          <span class="slot-tag">17h00 – 18h30</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Dimanche</td>
+        <td>
+          <span class="slot-tag">9h00 – 10h30</span>
+          <span class="slot-tag">10h30 – 12h00</span>
+          <span class="slot-tag">12h00 – 13h30</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Compétition (optionnel)</td>
+        <td><span class="slot-tag">Mardi ou Vendredi — séance de coaching additionnelle</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Horaires spéciaux — Ramadan <span class="badge-tbd">À venir</span></h3>
+    <p style="color:var(--muted);font-size:13.5px;">Des créneaux adaptés seront proposés pendant le mois de Ramadan. Les horaires seront publiés ici dès qu'ils seront confirmés.</p>
+  </div>
+
+  <div class="card">
+    <h3>Jours fériés — pas de séance</h3>
+    <p style="color:var(--muted);font-size:13.5px;">Voici les jours fériés : aucune séance n'est rattrapée si elle tombe l'un de ces jours.</p>
+    <table class="schedule">
+      <tr><th>Date</th><th>Occasion</th></tr>
+      <tr><td>Jeudi 15 octobre 2026</td><td>Fête de l'Évacuation</td></tr>
+      <tr><td>Vendredi 1er janvier 2027</td><td>Nouvel An</td></tr>
+      <tr><td>Jeudi 14 janvier 2027</td><td>Fête de la Révolution et de la Jeunesse</td></tr>
+      <tr><td>~9-10 mars 2027 <span class="badge-tbd">Date approx.</span></td><td>Aïd El-Fitr (Aïd Sghir)</td></tr>
+      <tr><td>Samedi 20 mars 2027</td><td>Fête de l'Indépendance</td></tr>
+      <tr><td>Vendredi 9 avril 2027</td><td>Fête des Martyrs</td></tr>
+      <tr><td>Samedi 1er mai 2027</td><td>Fête du Travail</td></tr>
+      <tr><td>~16 mai 2027 <span class="badge-tbd">Date approx.</span></td><td>Aïd El-Adha (Aïd Kbir)</td></tr>
+    </table>
+    <p style="color:var(--muted);font-size:11.5px;margin:10px 0 0;">Les dates de l'Aïd suivent le calendrier lunaire et seront confirmées officiellement à l'approche de chaque fête.</p>
+  </div>
+
+  <a class="cta" href="inscription.html">Choisir mon créneau et m'inscrire</a>
+</main>
+
+<footer>
+  <div class="footer-contact">
+    <a class="contact-btn" href="tel:+21654500868"><span class="contact-icon">📞</span> 54 500 868</a>
+    <a class="contact-btn" href="https://wa.me/21654500868" target="_blank" rel="noopener"><span class="contact-icon">💬</span> WhatsApp</a>
+    <a class="contact-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=info.tunarco@gmail.com" target="_blank" rel="noopener"><span class="contact-icon">✉️</span> info.tunarco@gmail.com</a>
+    <a class="contact-btn" href="https://www.facebook.com/lespetitsgeniesdelarobotique/" target="_blank" rel="noopener"><span class="contact-icon">📘</span> Facebook</a>
+    <a class="contact-btn" href="https://www.instagram.com/lpgt55/" target="_blank" rel="noopener"><span class="contact-icon">📷</span> Instagram</a>
+    <a class="contact-btn" href="https://maps.app.goo.gl/1cRpveEhUmThUZqv9" target="_blank" rel="noopener"><span class="contact-icon">📍</span> Notre adresse</a>
+  </div>
+  <p class="footer-copy">© 2026 Les Petits Génies de la Tunisie</p>
+</footer>
+<script src="assets/interactions.js"></script>
+</body>
+</html>

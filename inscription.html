@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Inscription — Les Petits Génies de la Tunisie</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Exo+2:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+<div id="pageTransition"></div>
+<header class="site-header">
+  <div class="brand">
+    <img class="logo-img" src="assets/logo.png" alt="Logo Les Petits Génies">
+    <div class="brand-text">
+      <h1>Les Petits Génies de la Tunisie</h1>
+      <span>Robotique · Conception 3D · Programmation · Électronique</span>
+    </div>
+  </div>
+  <nav class="main-nav">
+    <a href="apropos.html">À propos</a>
+    <a href="index.html">Accueil</a>
+    <a href="formation.html">La formation</a>
+    <a href="creneaux.html">Créneaux</a>
+    <a href="planning-competitions.html">Compétitions</a>
+    <a href="inscription.html" class="active">Inscription</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-banner">
+    <h2 class="admission-title">GÉNIES LAB</h2>
+    <span class="year-badge">Admission 2026 – 2027</span>
+  </section>
+
+  <div id="successMsg" class="msg-success">✓ Inscription enregistrée avec succès ! <span id="emailStatus"></span></div>
+
+  <div id="confirmBox" class="confirm-box">
+    <h3>📩 Confirmation d'inscription</h3>
+    <p id="confirmSubtitle" style="color:var(--muted);font-size:13.5px;margin:0;">Voici le message envoyé :</p>
+    <div class="confirm-text" id="confirmText"></div>
+    <div class="confirm-actions">
+      <button type="button" class="btn-copy" id="btnCopy">📋 Copier le message complet</button>
+      <a class="btn-mail" id="btnMail" href="#">📧 Renvoyer par email</a>
+      <a class="btn-whatsapp" id="btnWhatsapp" href="#" target="_blank" rel="noopener">💬 Envoyer par WhatsApp</a>
+    </div>
+    <p style="color:var(--muted);font-size:11.5px;margin:10px 0 0;">
+      Le message est long : si le bouton email n'ouvre rien, utilisez "Copier" puis collez-le manuellement dans votre email ou WhatsApp.
+    </p>
+  </div>
+
+  <form class="inscription" id="inscriptionForm">
+    <fieldset>
+      <legend>Informations sur l'élève</legend>
+      <div class="field-row">
+        <div class="field">
+          <label>Nom et prénom de l'élève</label>
+          <input type="text" name="nomEleve" required>
+        </div>
+        <div class="field">
+          <label>Date de naissance de l'enfant</label>
+          <input type="date" name="dateNaissance" required>
+        </div>
+      </div>
+      <div class="field">
+        <label>Ancien adhérent ?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="ancienAdherent" value="Oui" required> Oui</label>
+          <label><input type="radio" name="ancienAdherent" value="Non"> Non</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Coordonnées</legend>
+      <div class="field-row">
+        <div class="field">
+          <label>Nom des parents</label>
+          <input type="text" name="nomParents" required>
+        </div>
+        <div class="field">
+          <label>Adresse email</label>
+          <input type="email" name="email" required>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Téléphone 1</label>
+          <input type="tel" name="tel1" required>
+        </div>
+        <div class="field">
+          <label>Téléphone 2</label>
+          <input type="tel" name="tel2" required>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Créneau souhaité</legend>
+      <div class="field-row">
+        <div class="field">
+          <label>Jour <span class="hint">(1h30/semaine)</span></label>
+          <select name="jour" id="jourSelect" required>
+            <option value="">— Choisir —</option>
+            <option value="Mardi">Mardi</option>
+            <option value="Mercredi">Mercredi</option>
+            <option value="Jeudi">Jeudi</option>
+            <option value="Vendredi">Vendredi</option>
+            <option value="Samedi">Samedi</option>
+            <option value="Dimanche">Dimanche</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Horaire</label>
+          <select name="horaire" id="horaireSelect" required>
+            <option value="">— Choisir un jour d'abord —</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label>Souhaite accéder aux séances compétition (mardi/vendredi, optionnel) ?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="competition" value="Oui" required> Oui</label>
+          <label><input type="radio" name="competition" value="Non" checked> Non</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Options &amp; Kits (facultatif)</legend>
+      <div class="field">
+        <div class="checkbox-row">
+          <label><input type="checkbox" name="optCompetiteur"> Formation « Compétiteurs »</label>
+          <label><input type="checkbox" name="optKitProg"> Kit Programmation</label>
+          <label><input type="checkbox" name="optKitElec"> Kit Électronique</label>
+          <label><input type="checkbox" name="optPull" id="optPullCheckbox"> Pull officiel</label>
+        </div>
+        <div class="field" id="pullSizeField" style="display:none;margin-top:12px;">
+          <label>Taille du pull</label>
+          <select name="pullTaille" id="pullTailleSelect">
+            <option value="">— Choisir —</option>
+            <option value="XS">XS (6-7 ans)</option>
+            <option value="S">S (8-10 ans)</option>
+            <option value="M">M (11-13 ans)</option>
+            <option value="L">L (14-15 ans)</option>
+            <option value="XL">XL (16+ ans / adulte)</option>
+          </select>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset id="feeFieldset" style="display:none;">
+      <legend>💰 Récapitulatif &amp; Paiement</legend>
+      <ul class="tariff-list" id="feeBreakdown"></ul>
+      <div class="total-line"><span>Total</span><span id="totalAmount">— DT</span></div>
+      <div class="monthly-line" id="monthlyLine" style="display:none;"></div>
+      <div class="field" style="margin-top:16px;">
+        <label>Mode de paiement souhaité</label>
+        <div class="radio-row">
+          <label><input type="radio" name="modePaiement" value="Unique" checked required> En une seule fois</label>
+          <label><input type="radio" name="modePaiement" value="3 fois"> En 3 fois (début de chaque mois)</label>
+        </div>
+      </div>
+      <p style="color:var(--muted);font-size:11.5px;margin:12px 0 0;">Le Pack Projets (170 ou 230 DT selon le niveau) est facturé séparément, après évaluation du niveau de l'enfant.</p>
+    </fieldset>
+
+    <fieldset>
+      <legend>📎 Documents à fournir</legend>
+      <div class="field-row">
+        <div class="field">
+          <label>Photo d'identité de l'enfant (scan/photo)</label>
+          <input type="file" name="photoIdentite" id="photoIdentite" accept="image/*,.pdf" required>
+        </div>
+        <div class="field">
+          <label>Extrait de naissance (scan/photo)</label>
+          <input type="file" name="extraitNaissance" id="extraitNaissance" accept="image/*,.pdf" required>
+        </div>
+      </div>
+      <p style="color:var(--muted);font-size:12.5px;margin:6px 0 0;">Ces documents sont automatiquement enregistrés dans notre Google Drive (dossier privé par enfant) — poids max recommandé : 8 Mo par fichier.</p>
+    </fieldset>
+
+    <fieldset>
+      <legend>📷 Droit à l'image</legend>
+      <div class="field">
+        <label>Autorisez-vous la publication de photos/vidéos de votre enfant (activités, projets, compétitions) sur nos réseaux sociaux (Facebook, Instagram) ?</label>
+        <div class="radio-row">
+          <label><input type="radio" name="droitImage" value="Oui" required> Oui, j'autorise</label>
+          <label><input type="radio" name="droitImage" value="Non"> Non, je refuse</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <button type="submit" class="submit-btn">Valider l'inscription</button>
+
+    <div class="note">
+      En validant ce formulaire, vous recevrez automatiquement un email de confirmation avec tous les détails
+      de l'inscription, et vos documents seront enregistrés dans notre Drive. Vous pouvez aussi nous contacter directement via WhatsApp.
+    </div>
+  </form>
+</main>
+
+<footer>
+  <div class="footer-contact">
+    <a class="contact-btn" href="tel:+21654500868"><span class="contact-icon">📞</span> 54 500 868</a>
+    <a class="contact-btn" href="https://wa.me/21654500868" target="_blank" rel="noopener"><span class="contact-icon">💬</span> WhatsApp</a>
+    <a class="contact-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=info.tunarco@gmail.com" target="_blank" rel="noopener"><span class="contact-icon">✉️</span> info.tunarco@gmail.com</a>
+    <a class="contact-btn" href="https://www.facebook.com/lespetitsgeniesdelarobotique/" target="_blank" rel="noopener"><span class="contact-icon">📘</span> Facebook</a>
+    <a class="contact-btn" href="https://www.instagram.com/lpgt55/" target="_blank" rel="noopener"><span class="contact-icon">📷</span> Instagram</a>
+    <a class="contact-btn" href="https://maps.app.goo.gl/1cRpveEhUmThUZqv9" target="_blank" rel="noopener"><span class="contact-icon">📍</span> Notre adresse</a>
+  </div>
+  <p class="footer-copy">© 2026 Les Petits Génies de la Tunisie</p>
+</footer>
+<script src="assets/interactions.js"></script>
+<script>
+/* ====== CONFIG EmailJS — à remplir pour activer l'envoi automatique ======
+   1. Créez un compte gratuit sur https://www.emailjs.com (~200 emails/mois gratuits)
+   2. Email Services → Add New Service → connectez votre Gmail → copiez le "Service ID"
+   3. Email Templates → Create New Template :
+        - champ "To email"  : {{to_email}}
+        - champ "Subject"   : {{subject}}
+        - corps du message  : {{message}}
+      → copiez le "Template ID"
+   4. Account → General → copiez la "Public Key"
+   5. Collez les 3 valeurs ci-dessous (entre guillemets), à la place de PASTE_...
+   Tant que ces valeurs ne sont pas remplies, le site n'essaie pas d'envoyer et
+   affiche simplement le bouton manuel "Renvoyer par email".
+*/
+const EMAILJS_PUBLIC_KEY  = "SPkbi6fdt5fmS96h0";
+const EMAILJS_SERVICE_ID  = "service_807wpga";
+const EMAILJS_TEMPLATE_ID = "template_13s04ac";
+const EMAILJS_READY = ![EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID].some(v => v.startsWith("PASTE_"));
+if (EMAILJS_READY && window.emailjs) {
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+}
+/* ========================================================================= */
+
+// Base de données centralisée (Google Sheets via Apps Script)
+const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbwa04Absh-tFj9d6HEdpPwy7j3-YfroqWtP8ySbGDU3ZLW8ywVv17Hw7kOut2OJd43vBQ/exec";
+
+const slots = {
+  "Mardi": ["14h00-15h30","15h30-17h00","17h00-18h30"],
+  "Mercredi": ["14h00-15h30","15h30-17h00","17h00-18h30"],
+  "Jeudi": ["14h00-15h30","15h30-17h00","17h00-18h30"],
+  "Vendredi": ["14h00-15h30","15h30-17h00","17h00-18h30"],
+  "Samedi": ["9h00-10h30","10h30-12h00","14h00-15h30","15h30-17h00","17h00-18h30"],
+  "Dimanche": ["9h00-10h30","10h30-12h00","12h00-13h30"]
+};
+
+const jourSelect = document.getElementById("jourSelect");
+const horaireSelect = document.getElementById("horaireSelect");
+
+jourSelect.addEventListener("change", () => {
+  const list = slots[jourSelect.value] || [];
+  horaireSelect.innerHTML = list.length
+    ? '<option value="">— Choisir —</option>' + list.map(h => `<option value="${h}">${h}</option>`).join("")
+    : '<option value="">— Choisir un jour d\'abord —</option>';
+});
+
+const FEES = { inscription:50, formation:300, optCompetiteur:100, optKitProg:180, optKitElec:100, optPull:45 };
+const FEE_LABELS = {
+  optCompetiteur: "Formation « Compétiteurs »",
+  optKitProg: "Kit Programmation",
+  optKitElec: "Kit Électronique",
+  optPull: "Pull officiel"
+};
+
+// Calcule le détail + le total à partir d'un objet "checked" { optCompetiteur:bool, ... } et de la taille du pull
+function computeFees(checked, pullTaille){
+  const items = [
+    { label:"Frais d'inscription", price:FEES.inscription },
+    { label:"Formation (trimestre)", price:FEES.formation }
+  ];
+  if (checked.optCompetiteur) items.push({ label:FEE_LABELS.optCompetiteur, price:FEES.optCompetiteur });
+  if (checked.optKitProg) items.push({ label:FEE_LABELS.optKitProg, price:FEES.optKitProg });
+  if (checked.optKitElec) items.push({ label:FEE_LABELS.optKitElec, price:FEES.optKitElec });
+  if (checked.optPull) items.push({ label: pullTaille ? `Pull officiel (taille ${pullTaille})` : "Pull officiel", price:FEES.optPull });
+  const total = items.reduce((s,i) => s + i.price, 0);
+  return { items, total };
+}
+
+const optPullCheckbox = document.getElementById("optPullCheckbox");
+const pullSizeField = document.getElementById("pullSizeField");
+const pullTailleSelect = document.getElementById("pullTailleSelect");
+optPullCheckbox.addEventListener("change", () => {
+  const on = optPullCheckbox.checked;
+  pullSizeField.style.display = on ? "block" : "none";
+  pullTailleSelect.required = on;
+  if (!on) pullTailleSelect.value = "";
+});
+
+function updateTotalDisplay(){
+  document.getElementById("feeFieldset").style.display = "block";
+  const form = document.getElementById("inscriptionForm");
+  const checked = {
+    optCompetiteur: form.querySelector('[name="optCompetiteur"]').checked,
+    optKitProg: form.querySelector('[name="optKitProg"]').checked,
+    optKitElec: form.querySelector('[name="optKitElec"]').checked,
+    optPull: form.querySelector('[name="optPull"]').checked
+  };
+  const { items, total } = computeFees(checked, pullTailleSelect.value);
+  document.getElementById("feeBreakdown").innerHTML =
+    items.map(i => `<li>${i.label} <span class="t-price">${i.price} DT</span></li>`).join("");
+  document.getElementById("totalAmount").textContent = total + " DT";
+
+  const modePaiement = form.querySelector('[name="modePaiement"]:checked').value;
+  const monthlyLine = document.getElementById("monthlyLine");
+  if (modePaiement === "3 fois") {
+    monthlyLine.style.display = "flex";
+    monthlyLine.innerHTML = `<span>Soit 3 versements de</span><span>${Math.ceil(total/3)} DT / mois</span>`;
+  } else {
+    monthlyLine.style.display = "none";
+  }
+}
+
+["optCompetiteur","optKitProg","optKitElec","optPull"].forEach(key => {
+  document.querySelector(`[name="${key}"]`).addEventListener("change", updateTotalDisplay);
+});
+document.querySelectorAll('[name="modePaiement"]').forEach(r => r.addEventListener("change", updateTotalDisplay));
+
+function buildConfirmationText(r){
+  const nom = r.nomEleve || "votre enfant";
+  const { items, total } = computeFees({
+    optCompetiteur: r.optCompetiteur === "Oui",
+    optKitProg: r.optKitProg === "Oui",
+    optKitElec: r.optKitElec === "Oui",
+    optPull: r.optPull === "Oui"
+  }, r.pullTaille);
+  const lignes = items.map(i => `- ${i.label} : ${i.price} DT.`).join("\n");
+  const paiement = r.modePaiement === "3 fois"
+    ? `Paiement en 3 fois : ${Math.ceil(total/3)} DT au début de chaque mois.`
+    : "Paiement en une seule fois.";
+
+  return `Objet : Confirmation d'inscription – ${nom}
+
+Chers parents,
+
+Nous avons le plaisir de vous confirmer l'inscription de ${nom} à l'académie de robotique.
+
+📅 Séance hebdomadaire : ${r.jour || "-"} (${r.horaire || "-"}).
+
+💰 Récapitulatif des frais :
+${lignes}
+Total : ${total} DT.
+${paiement}
+ℹ️ Pack Projets (170 ou 230 DT selon niveau) facturé séparément.
+
+Merci pour votre confiance !
+L'équipe TUNARCO
+📞 54 500 868 · ✉️ info.tunarco@gmail.com`;
+}
+
+// Convertit un fichier <input type=file> en data URL base64 (nécessaire pour
+// l'envoyer à Apps Script, qui l'enregistrera ensuite dans Google Drive).
+function fileToBase64(file) {
+  return new Promise((resolve) => {
+    if (!file || !file.size) return resolve("");
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = () => resolve("");
+    reader.readAsDataURL(file);
+  });
+}
+
+const MAX_FILE_SIZE = 8 * 1024 * 1024; // 8 Mo
+
+document.getElementById("inscriptionForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  const photoFile = fd.get("photoIdentite");
+  const extraitFile = fd.get("extraitNaissance");
+
+  if ((photoFile && photoFile.size > MAX_FILE_SIZE) || (extraitFile && extraitFile.size > MAX_FILE_SIZE)) {
+    alert("Un des fichiers dépasse 8 Mo. Merci de choisir une photo/scan plus léger avant de valider.");
+    return;
+  }
+
+  const submitBtn = e.target.querySelector(".submit-btn");
+  submitBtn.disabled = true;
+  const submitBtnOriginal = submitBtn.textContent;
+  submitBtn.textContent = "Envoi en cours…";
+
+  const record = Object.fromEntries(fd.entries());
+  record.optCompetiteur = fd.has("optCompetiteur") ? "Oui" : "Non";
+  record.optKitProg = fd.has("optKitProg") ? "Oui" : "Non";
+  record.optKitElec = fd.has("optKitElec") ? "Oui" : "Non";
+  record.optPull = fd.has("optPull") ? "Oui" : "Non";
+  record.dateInscription = new Date().toISOString().slice(0,10);
+  const { total } = computeFees({
+    optCompetiteur: record.optCompetiteur === "Oui",
+    optKitProg: record.optKitProg === "Oui",
+    optKitElec: record.optKitElec === "Oui",
+    optPull: record.optPull === "Oui"
+  }, record.pullTaille);
+  record.total = total;
+  // Nom du fichier gardé pour référence + contenu en base64 pour l'enregistrement Drive
+  record.photoIdentite = photoFile?.name || "";
+  record.extraitNaissance = extraitFile?.name || "";
+  record.photoIdentiteData = await fileToBase64(photoFile);
+  record.extraitNaissanceData = await fileToBase64(extraitFile);
+
+  // Enregistrement dans la base de données Google Sheets centralisée
+  // (Apps Script décode les fichiers et les enregistre dans Google Drive)
+  fetch(GOOGLE_SHEET_URL, { method: "POST", body: JSON.stringify(record) }).catch(err => console.error("Sheet DB error:", err));
+
+  const subject = "Confirmation d'inscription – TUNARCO";
+  const confirmText = buildConfirmationText(record);
+  document.getElementById("confirmText").textContent = confirmText;
+  document.getElementById("btnMail").href =
+    `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(record.email||"")}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(confirmText)}`;
+  document.getElementById("btnMail").target = "_blank";
+  document.getElementById("btnMail").rel = "noopener";
+  document.getElementById("btnWhatsapp").href =
+    `https://api.whatsapp.com/send?text=${encodeURIComponent(confirmText)}`;
+  document.getElementById("btnCopy").onclick = () => {
+    navigator.clipboard.writeText(confirmText).then(() => {
+      const btn = document.getElementById("btnCopy");
+      const original = btn.textContent;
+      btn.textContent = "✓ Copié !";
+      setTimeout(() => btn.textContent = original, 2000);
+    }).catch(() => alert("Impossible de copier automatiquement — sélectionnez le texte ci-dessus manuellement."));
+  };
+  document.getElementById("confirmBox").style.display = "block";
+
+  const msg = document.getElementById("successMsg");
+  const emailStatus = document.getElementById("emailStatus");
+  const confirmSubtitle = document.getElementById("confirmSubtitle");
+  msg.style.display = "block";
+  window.scrollTo({top:0, behavior:"smooth"});
+
+  if (EMAILJS_READY && window.emailjs) {
+    emailStatus.textContent = "Envoi de l'email de confirmation en cours…";
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      to_email: record.email || "",
+      to_name: record.nomEleve || "",
+      subject: subject,
+      message: confirmText
+    }).then(() => {
+      emailStatus.textContent = `📧 Email envoyé automatiquement à ${record.email}. 📁 Documents enregistrés dans notre Drive.`;
+      confirmSubtitle.textContent = "✓ Ce message a été envoyé automatiquement par email. Vous pouvez aussi l'envoyer par WhatsApp :";
+    }).catch((err) => {
+      console.error("EmailJS error:", err);
+      emailStatus.textContent = "⚠️ L'envoi automatique de l'email a échoué — vos documents sont bien enregistrés. Merci d'envoyer la confirmation manuellement.";
+      confirmSubtitle.textContent = "L'envoi automatique a échoué. Envoyez la confirmation manuellement :";
+    });
+  } else {
+    emailStatus.textContent = "⚠️ Envoi automatique non configuré — utilisez le bouton email ci-dessous.";
+    confirmSubtitle.textContent = "Voici le message à envoyer aux parents :";
+  }
+
+  submitBtn.disabled = false;
+  submitBtn.textContent = submitBtnOriginal;
+  e.target.reset();
+  horaireSelect.innerHTML = '<option value="">— Choisir un jour d\'abord —</option>';
+  setTimeout(() => msg.style.display = "none", 8000);
+});
+</script>
+</body>
+</html>

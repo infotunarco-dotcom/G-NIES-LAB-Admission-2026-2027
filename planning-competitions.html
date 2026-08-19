@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Planning des compétitions — Les Petits Génies de la Tunisie</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Exo+2:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="pageTransition"></div>
+<header class="site-header">
+  <div class="brand">
+    <img class="logo-img" src="assets/logo.png" alt="Logo Les Petits Génies">
+    <div class="brand-text">
+      <h1>Les Petits Génies de la Tunisie</h1>
+      <span>Robotique · Conception 3D · Programmation · Électronique</span>
+    </div>
+  </div>
+  <nav class="main-nav">
+    <a href="apropos.html">À propos</a>
+    <a href="index.html">Accueil</a>
+    <a href="formation.html">La formation</a>
+    <a href="creneaux.html">Créneaux</a>
+    <a href="planning-competitions.html" class="active">Compétitions</a>
+    <a href="inscription.html">Inscription</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-banner">
+    <h2 class="admission-title">GÉNIES LAB</h2>
+    <span class="year-badge">Admission 2026 – 2027</span>
+  </section>
+
+  <div class="card">
+    <h3>Calendrier des compétitions</h3>
+    <p>Plusieurs compétitions nationales et internationales sont visées cette année (accès volontaire, coaching le mardi ou vendredi).
+    Certaines dates ne sont pas encore fixées — cette page sera mise à jour au fur et à mesure des confirmations.</p>
+  </div>
+
+  <div class="cal-list">
+
+    <div class="cal-card">
+      <div class="cal-date">
+        <div class="cal-day">11</div>
+        <div class="cal-month">Oct 2026</div>
+      </div>
+      <div class="cal-info">
+        <h4>RoboCup <span class="badge-limited">Places limitées</span></h4>
+        <p class="cal-meta">📍 ENSI, Manouba</p>
+        <p>Compétition nationale de robotique — début d'année de formation, ouverte aux niveaux préparés.</p>
+        <button class="participate-btn" data-comp="RoboCup — ENSI Manouba (11 Oct 2026)">Je participe</button>
+        <form class="participate-form">
+          <div class="field">
+            <label>Nom et prénom de l'enfant</label>
+            <input type="text" class="participant-name" required>
+          </div>
+          <div class="field">
+            <label>Email des parents</label>
+            <input type="email" class="participant-email" required>
+          </div>
+          <div class="field">
+            <label>Téléphone</label>
+            <input type="tel" class="participant-tel" required>
+          </div>
+          <button type="submit" class="submit-btn small-btn">Valider ma participation</button>
+          <div class="participate-success">✓ Participation enregistrée !</div>
+        </form>
+      </div>
+    </div>
+
+    <div class="cal-card">
+      <div class="cal-date tbd">
+        <div class="cal-day">?</div>
+        <div class="cal-month">2026-27</div>
+      </div>
+      <div class="cal-info">
+        <h4>Eurobot — Qualifications tunisiennes <span class="badge-tbd">Date à confirmer</span></h4>
+        <p class="cal-meta">📍 À confirmer</p>
+        <p>Étape de qualification nationale pour la compétition internationale Eurobot.</p>
+        <button class="participate-btn" data-comp="Eurobot — Qualifications tunisiennes">Je participe</button>
+        <form class="participate-form">
+          <div class="field">
+            <label>Nom et prénom de l'enfant</label>
+            <input type="text" class="participant-name" required>
+          </div>
+          <div class="field">
+            <label>Email des parents</label>
+            <input type="email" class="participant-email" required>
+          </div>
+          <div class="field">
+            <label>Téléphone</label>
+            <input type="tel" class="participant-tel" required>
+          </div>
+          <button type="submit" class="submit-btn small-btn">Valider ma participation</button>
+          <div class="participate-success">✓ Participation enregistrée !</div>
+        </form>
+      </div>
+    </div>
+
+    <div class="cal-card">
+      <div class="cal-date tbd">
+        <div class="cal-day">?</div>
+        <div class="cal-month">2026-27</div>
+      </div>
+      <div class="cal-info">
+        <h4>MRC — Hammamet <span class="badge-tbd">Date à confirmer</span></h4>
+        <p class="cal-meta">📍 Hammamet</p>
+        <p>Minoan Robotsports Competition — planning pas encore finalisé.</p>
+        <button class="participate-btn" data-comp="MRC — Hammamet">Je participe</button>
+        <form class="participate-form">
+          <div class="field">
+            <label>Nom et prénom de l'enfant</label>
+            <input type="text" class="participant-name" required>
+          </div>
+          <div class="field">
+            <label>Email des parents</label>
+            <input type="email" class="participant-email" required>
+          </div>
+          <div class="field">
+            <label>Téléphone</label>
+            <input type="tel" class="participant-tel" required>
+          </div>
+          <button type="submit" class="submit-btn small-btn">Valider ma participation</button>
+          <div class="participate-success">✓ Participation enregistrée !</div>
+        </form>
+      </div>
+    </div>
+
+    <div class="cal-card">
+      <div class="cal-date own">
+        <div class="cal-day">?</div>
+        <div class="cal-month">Juin 2027</div>
+      </div>
+      <div class="cal-info">
+        <h4>Festival de Robotique <span class="badge-own">Notre événement</span></h4>
+        <p class="cal-meta">📍 Les Petits Génies de la Tunisie</p>
+        <p>Notre propre compétition, organisée par TUNARCO en fin d'année de formation — l'occasion pour tous nos adhérents de présenter leurs projets.</p>
+        <button class="participate-btn" data-comp="Festival de Robotique — Les Petits Génies (Juin 2027)">Je participe</button>
+        <form class="participate-form">
+          <div class="field">
+            <label>Nom et prénom de l'enfant</label>
+            <input type="text" class="participant-name" required>
+          </div>
+          <div class="field">
+            <label>Email des parents</label>
+            <input type="email" class="participant-email" required>
+          </div>
+          <div class="field">
+            <label>Téléphone</label>
+            <input type="tel" class="participant-tel" required>
+          </div>
+          <button type="submit" class="submit-btn small-btn">Valider ma participation</button>
+          <div class="participate-success">✓ Participation enregistrée !</div>
+        </form>
+      </div>
+    </div>
+
+    <div class="cal-card">
+      <div class="cal-date tbd">
+        <div class="cal-day">?</div>
+        <div class="cal-month">2026-27</div>
+      </div>
+      <div class="cal-info">
+        <h4>Compétition supplémentaire <span class="badge-tbd">À venir</span></h4>
+        <p class="cal-meta">📍 À confirmer</p>
+        <p>Emplacement réservé pour une autre compétition prévue cette année.</p>
+        <button class="participate-btn" data-comp="Compétition supplémentaire 1">Je participe</button>
+        <form class="participate-form">
+          <div class="field">
+            <label>Nom et prénom de l'enfant</label>
+            <input type="text" class="participant-name" required>
+          </div>
+          <div class="field">
+            <label>Email des parents</label>
+            <input type="email" class="participant-email" required>
+          </div>
+          <div class="field">
+            <label>Téléphone</label>
+            <input type="tel" class="participant-tel" required>
+          </div>
+          <button type="submit" class="submit-btn small-btn">Valider ma participation</button>
+          <div class="participate-success">✓ Participation enregistrée !</div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+<a class="cta" href="formation.html">Voir le planning de la formation</a>
+
+</main>
+
+<footer>
+  <div class="footer-contact">
+    <a class="contact-btn" href="tel:+21654500868"><span class="contact-icon">📞</span> 54 500 868</a>
+    <a class="contact-btn" href="https://wa.me/21654500868" target="_blank" rel="noopener"><span class="contact-icon">💬</span> WhatsApp</a>
+    <a class="contact-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=info.tunarco@gmail.com" target="_blank" rel="noopener"><span class="contact-icon">✉️</span> info.tunarco@gmail.com</a>
+    <a class="contact-btn" href="https://www.facebook.com/lespetitsgeniesdelarobotique/" target="_blank" rel="noopener"><span class="contact-icon">📘</span> Facebook</a>
+    <a class="contact-btn" href="https://www.instagram.com/lpgt55/" target="_blank" rel="noopener"><span class="contact-icon">📷</span> Instagram</a>
+    <a class="contact-btn" href="https://maps.app.goo.gl/1cRpveEhUmThUZqv9" target="_blank" rel="noopener"><span class="contact-icon">📍</span> Notre adresse</a>
+  </div>
+  <p class="footer-copy">© 2026 Les Petits Génies de la Tunisie</p>
+</footer>
+<script src="assets/interactions.js"></script>
+<script>
+const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbwa04Absh-tFj9d6HEdpPwy7j3-YfroqWtP8ySbGDU3ZLW8ywVv17Hw7kOut2OJd43vBQ/exec";
+
+document.querySelectorAll('.participate-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const form = btn.nextElementSibling;
+    form.classList.toggle('open');
+  });
+});
+
+document.querySelectorAll('.participate-form').forEach(form => {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = form.previousElementSibling;
+    const compName = btn.getAttribute('data-comp');
+    const nameInput = form.querySelector('.participant-name');
+    const emailInput = form.querySelector('.participant-email');
+    const telInput = form.querySelector('.participant-tel');
+    const record = {
+      type: 'competition',
+      competition: compName,
+      nomEleve: nameInput.value,
+      email: emailInput.value,
+      tel: telInput.value,
+      date: new Date().toISOString().slice(0,10)
+    };
+    // Enregistrement dans la base de données Google Sheets centralisée
+    fetch(GOOGLE_SHEET_URL, { method: "POST", body: JSON.stringify(record) }).catch(err => console.error("Sheet DB error:", err));
+
+    form.querySelector('.participate-success').style.display = 'block';
+    btn.textContent = '✓ Inscrit(e)';
+    btn.disabled = true;
+    nameInput.disabled = true;
+    emailInput.disabled = true;
+    telInput.disabled = true;
+    form.querySelector('.submit-btn').disabled = true;
+  });
+});
+</script>
+</body>
+</html>
